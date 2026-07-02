@@ -1,9 +1,13 @@
 class Solution {
     public boolean isPalindrome(int x) {
-        String reversed = new StringBuilder(String.valueOf(x)).reverse().toString();
+        char[] arr = String.valueOf(x).toCharArray();
+        int mid = arr.length / 2;
+        for (int i = 0; i < mid; i++) {
+            if (arr[i] != arr[arr.length - 1 - i]) {
+                return false;
+            }
+        }
 
-        if(reversed.equals(String.valueOf(x))) {
-            return true;
-        } else return false;
+        return true;
     }
 }
