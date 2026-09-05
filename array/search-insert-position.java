@@ -18,7 +18,7 @@ class Solution {
         } 
 
         for(int i = start; i < end; i++) {
-            if(target > nums[i] &&  target < nums[i+1]) {
+            if(target > nums[i] &&  target <= nums[i+1]) {
                 output = i + 1;
                 break;
             }
